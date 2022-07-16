@@ -14579,6 +14579,17 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+$$\newcommand{\ket}[1]{\left|{#1}\right\rangle}$$$$\newcommand{\bra}[1]{\left\langle{#1}\right|}$$$$\newcommand{\braket}[2]{\left\langle{#1}\middle|{#2}\right\rangle}$$
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1><center>Práctica N°2: <br>Generación cuántica de números aleatorios</center></h1>
 <h3><br><center>Luisa Fernanda Gómez Buitrago<br>Luis Javier Zuluaga Betancur </center></h3>
 <h4><br><center>Computación Cuántica 2022.1<br>Facultad de Ingeniería<br>Universidad de Antioquia</center></h4>
@@ -14595,10 +14606,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h2>1. Instalación del Qiskit<br></h2>
 <p>1.1. A fin de realizar esta práctica de laboratorio, instale localmente en su computador de trabajo, la última versión de la plataforma <strong>Qiskit</strong>. Para ello siga las instrucciones indicadas en la siguiente página:  <br></p>
-<p><center> <a href="https://github.com/Qiskit/Qiskit">https://github.com/Qiskit/Qiskit</a></center> <br>
-$$\newcommand{\ket}[1]{\left|{#1}\right\rangle}$$
-$$\newcommand{\bra}[1]{\left\langle{#1}\right|}$$
-$$\newcommand{\braket}[2]{\left\langle{#1}\middle|{#2}\right\rangle}$$</p>
+<p><center> <a href="https://github.com/Qiskit/Qiskit" target="_blank">https://github.com/Qiskit/Qiskit</a></center> <br></p>
 
 </div>
 </div>
@@ -14762,7 +14770,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -14794,7 +14802,7 @@ class="
 encontrado en el siguiente enlace, y abra en su entorno de trabajo el código fuente descargado:  <br>
   <center>
     <b>Teams de Computación Cuántica 2022.1:</b> <br>
-    <a href="https://surl.ms/Bjd">QRNG_Quantum Random</a></center> <br></p>
+    <a href="https://surl.ms/Bjd" target="_blank">QRNG_Quantum Random</a></center> <br></p>
 
 </div>
 </div>
@@ -14816,11 +14824,11 @@ encontrado en el siguiente enlace, y abra en su entorno de trabajo el código fu
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Enable your account on Qiskit, replace &#39;My_API_Token&#39; with your newly generated token</span>
-<span class="n">token</span> <span class="o">=</span> <span class="s1">&#39;ed185a8fb8ddaf48d5c19dc1014af69181847a37c6bc517fb70c3abf77e330ab2a003cd09fcd8bb608f30ee64cfe0e9e7502be1505f404cff9afe13f3ac73efd&#39;</span>
+<span class="n">token</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Escriba el token de su cuenta de IBM: &#39;</span><span class="p">))</span>
 <span class="n">IBMQ</span><span class="o">.</span><span class="n">save_account</span><span class="p">(</span><span class="n">token</span><span class="p">,</span> <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">my_provider</span> <span class="o">=</span> <span class="n">IBMQ</span><span class="o">.</span><span class="n">load_account</span><span class="p">()</span>
 </pre></div>
@@ -14835,7 +14843,7 @@ encontrado en el siguiente enlace, y abra en su entorno de trabajo el código fu
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_provider</span><span class="o">.</span><span class="n">backends</span><span class="p">())</span>
@@ -15137,7 +15145,7 @@ Result:  5486643
 compartido:  <br>
   <center>
     <b>Teams de Computación Cuántica 2022.1:</b> <br>
-    <a href="https://quantumcomputinguk.org/tutorials/creating-qubit-permutations-in-qiskit-with-code">Qubit Permutations in Qiskit</a></center> <br></p>
+    <a href="https://quantumcomputinguk.org/tutorials/creating-qubit-permutations-in-qiskit-with-code" target="_blank">Qubit Permutations in Qiskit</a></center> <br></p>
 
 </div>
 </div>
@@ -15469,7 +15477,7 @@ class="
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="4.-Generaci%C3%B3n-real-de-n%C3%BAmeros-cu%C3%A1nticos-mediante-permutaci%C3%B3n">4. <u>Generaci&#243;n real de n&#250;meros cu&#225;nticos mediante permutaci&#243;n</u><a class="anchor-link" href="#4.-Generaci%C3%B3n-real-de-n%C3%BAmeros-cu%C3%A1nticos-mediante-permutaci%C3%B3n">&#182;</a></h2>
+<h2 id="4.-Generaci%C3%B3n-real-de-n%C3%BAmeros-cu%C3%A1nticos-mediante-permutaci%C3%B3n">4. Generaci&#243;n real de n&#250;meros cu&#225;nticos mediante permutaci&#243;n<a class="anchor-link" href="#4.-Generaci%C3%B3n-real-de-n%C3%BAmeros-cu%C3%A1nticos-mediante-permutaci%C3%B3n">&#182;</a></h2>
 </div>
 </div>
 </div>
